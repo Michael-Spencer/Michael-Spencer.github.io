@@ -1,1 +1,1 @@
-CV and personal website
+Personal website
