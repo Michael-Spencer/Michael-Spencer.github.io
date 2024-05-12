@@ -21,14 +21,15 @@ header {
 }
 
 .navigation {
-  position: absolute;
+  position: fixed; /* Makes the navigation fixed to the viewport */
   top: 0;
   left: 0;
-  width: 100%;
+  width: 150px; /* Adjust this value for the desired menu width */
   height: 0;
   background-color: #f0f0f0;
   transition: height 0.3s ease;
-  overflow: hidden; /* This hides the navigation initially */
+  overflow-x: hidden; /* This hides the horizontal overflow */
+  z-index: 1; /* Ensures the menu appears above other content */
 }
 
 .navigation.active {
@@ -46,6 +47,18 @@ header {
   background-color: #e0e0e0;
 }
 
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Adjust positioning for the "x" button */
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
 main {
   padding: 2rem;
+  margin-left: 150px; /* Creates space for the opened menu */
 }
